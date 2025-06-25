@@ -1,46 +1,48 @@
 import { useState, useEffect , useRef} from "react";
 
+const base = import.meta.env.BASE_URL;
+
 const images = [
-  "/public/split_(156x170)/image_(1-1).png",
-//   "/public/split_(156x170)/image_(1-2).png",
-//   "/public/split_(156x170)/image_(1-3).png",
-  "/public/split_(156x170)/image_(1-4).png",
-//   "/public/split_(156x170)/image_(1-5).png",
-  "/public/split_(156x170)/image_(1-6).png",
-//   "/public/split_(156x170)/image_(2-1).png",
-  "/public/split_(156x170)/image_(2-2).png",
-//   "/public/split_(156x170)/image_(2-3).png",
-  "/public/split_(156x170)/image_(2-4).png",
-  "/public/split_(156x170)/image_(2-5).png",
-  "/public/split_(156x170)/image_(2-6).png",
-  "/public/split_(156x170)/image_(3-1).png",
-  "/public/split_(156x170)/image_(3-2).png",
-  "/public/split_(156x170)/image_(3-3).png",
-  "/public/split_(156x170)/image_(3-4).png",
-  "/public/split_(156x170)/image_(3-5).png",
-  "/public/split_(156x170)/image_(3-6).png",
-  "/public/split_(156x170)/image_(4-2).png",
-  "/public/split_(156x170)/image_(4-3).png",
-  "/public/split_(156x170)/image_(4-5).png",
-  "/public/split_(156x170)/image_(4-6).png",
-  "/public/split_(156x170)/image_(5-1).png",
-  "/public/split_(156x170)/image_(5-2).png",
-  "/public/split_(156x170)/image_(5-3).png",
-  "/public/split_(156x170)/image_(5-4).png",
-  "/public/split_(156x170)/image_(5-5).png",
-  "/public/split_(156x170)/image_(5-6).png",
-  "/public/split_(156x170)/image_(4-2).png",
-  "/public/split_(156x170)/image_(4-3).png",
-  "/public/split_(156x170)/image_(4-5).png",
-  "/public/split_(156x170)/image_(4-6).png",
-  "/public/split_(156x170)/image_(5-1).png",
-  "/public/split_(156x170)/image_(5-2).png",
-  "/public/split_(156x170)/image_(5-3).png",
-  "/public/split_(156x170)/image_(5-4).png",
-  "/public/split_(156x170)/image_(5-5).png",
-  "/public/split_(156x170)/image_(5-6).png",
+  "split_(156x170)/image_(1-1).png",
+  // "split_(156x170)/image_(1-2).png",
+  // "split_(156x170)/image_(1-3).png",
+  "split_(156x170)/image_(1-4).png",
+  // "split_(156x170)/image_(1-5).png",
+  "split_(156x170)/image_(1-6).png",
+  // "split_(156x170)/image_(2-1).png",
+  "split_(156x170)/image_(2-2).png",
+  // "split_(156x170)/image_(2-3).png",
+  "split_(156x170)/image_(2-4).png",
+  "split_(156x170)/image_(2-5).png",
+  "split_(156x170)/image_(2-6).png",
+  "split_(156x170)/image_(3-1).png",
+  "split_(156x170)/image_(3-2).png",
+  "split_(156x170)/image_(3-3).png",
+  "split_(156x170)/image_(3-4).png",
+  "split_(156x170)/image_(3-5).png",
+  "split_(156x170)/image_(3-6).png",
+  "split_(156x170)/image_(4-2).png",
+  "split_(156x170)/image_(4-3).png",
+  "split_(156x170)/image_(4-5).png",
+  "split_(156x170)/image_(4-6).png",
+  "split_(156x170)/image_(5-1).png",
+  "split_(156x170)/image_(5-2).png",
+  "split_(156x170)/image_(5-3).png",
+  "split_(156x170)/image_(5-4).png",
+  "split_(156x170)/image_(5-5).png",
+  "split_(156x170)/image_(5-6).png",
+  "split_(156x170)/image_(4-2).png",
+  "split_(156x170)/image_(4-3).png",
+  "split_(156x170)/image_(4-5).png",
+  "split_(156x170)/image_(4-6).png",
+  "split_(156x170)/image_(5-1).png",
+  "split_(156x170)/image_(5-2).png",
+  "split_(156x170)/image_(5-3).png",
+  "split_(156x170)/image_(5-4).png",
+  "split_(156x170)/image_(5-5).png",
+  "split_(156x170)/image_(5-6).png",
   // ...必要な枚数分追加（/publicに置くとパスだけでOK）
-];
+].map(p => `${base}${p}`);
 
 const crackFrames = [0];
 
@@ -65,7 +67,7 @@ function SplashAnimation({ onFinish }) {
 
   return (
     <div className="splash-bg">
-    <audio ref={audioRef} src="/audio/孵化・卵孵る.mp3" preload="auto" />
+    <audio ref={audioRef} src={`${base}audio/孵化・卵孵る.mp3`} preload="auto" />
       <img
         src={images[frame]}
         alt={`アニメ${frame + 1}`}

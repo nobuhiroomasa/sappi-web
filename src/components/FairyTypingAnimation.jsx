@@ -56,7 +56,7 @@ export default function FairyTypingAnimation() {
         <TypingText onUpdatePos={setCurrentChar} fairyPos={fairyPos} />
         {/* 妖精キャラ画像 */}
         <img
-          src="/fairy.png"
+          src={`${import.meta.env.BASE_URL}fairy.png`}
           alt="妖精"
           className="fairy-char"
           style={{

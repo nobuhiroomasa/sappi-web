@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import WorksCarousel from "./WorksCarousel.jsx";
 
+const base = import.meta.env.BASE_URL;
 const navItems = [
   {
     title: "ギャラリー一覧",
@@ -29,7 +30,7 @@ export default function NavCards() {
     <section className="nav-cards">
       {navItems.map((item,i) => (
         <motion.a
-         href={item.link} 
+         href={`${base}${item.link.replace(/^\//, "")}`}
          className="nav-card" 
          key={item.title}
          initial={{ opacity: 0, y: 40 }}

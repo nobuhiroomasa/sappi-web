@@ -12,13 +12,14 @@ import WorksCarousel from "./components/WorksCarousel";
 import "./index.css";
 import "./App.css";
 
+const base = import.meta.env.BASE_URL;
 const images = [
-  { src: "/sappi-1.jpg", alt: "森の中のどうぶつたち" },
-  { src: "/sappi-2.jpeg", alt: "夜空のぼうけん" },
-  { src: "/sappi-3.jpeg", alt: "おひさまとおはな" },
-  { src: "/sappi-3.jpeg", alt: "おひさまとおはな" },
-  { src: "/sappi-3.jpeg", alt: "おひさまとおはな" },
-  { src: "/sappi-3.jpeg", alt: "おひさまとおはな" },
+  { src: `${base}sappi-1.jpg`, alt: "森の中のどうぶつたち" },
+  { src: `${base}sappi-2.jpeg`, alt: "夜空のぼうけん" },
+  { src: `${base}sappi-3.jpeg`, alt: "おひさまとおはな" },
+  { src: `${base}sappi-3.jpeg`, alt: "おひさまとおはな" },
+  { src: `${base}sappi-3.jpeg`, alt: "おひさまとおはな" },
+  { src: `${base}sappi-3.jpeg`, alt: "おひさまとおはな" },
 ];
 
 

@@ -1,12 +1,13 @@
 // src/Footer.jsx
 export default function Footer() {
+    const base = import.meta.env.BASE_URL;
     return (
       <footer className="site-footer">
         <div className="footer-content">
           <div className="footer-links">
-            <a href="/about">このサイトについて</a>
-            <a href="/goods">ギャラリー一覧</a>
-            <a href="/ContactForm">お問い合わせ</a>
+            <a href={`${base}about`}>このサイトについて</a>
+            <a href={`${base}goods`}>ギャラリー一覧</a>
+            <a href={`${base}ContactForm`}>お問い合わせ</a>
           </div>
           <div className="footer-sns">
             <a href="https://twitter.com/your_twitter" target="_blank" rel="noopener" aria-label="X (Twitter)">
