@@ -10,3 +10,15 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## GitHub Pages Deployment
+
+This project is configured to deploy using GitHub Actions. When changes are pushed to the `main` branch, the site is built and published to the `gh-pages` branch automatically. The published site is available at `https://<your-account>.github.io/sappi-web/`.
+
+To trigger a manual deployment run:
+
+```bash
+npm run build
+```
+
+and commit the generated `dist` folder to the `gh-pages` branch or rely on the included workflow.
